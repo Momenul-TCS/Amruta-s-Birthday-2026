@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game1 - Amruta's Birthday</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f0f8ff; margin: 0; padding: 20px; }
+    .card { max-width: 640px; margin: auto; background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 4px 14px rgba(0,0,0,0.1); }
+    h1 { color: #2c3e50; }
+    p { color: #34495e; }
+    button { background: #3498db; border: none; color: #fff; padding: 10px 16px; border-radius: 6px; cursor: pointer; }
+    button:hover { background: #2980b9; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Game 1: Birthday Surprise</h1>
+    <p>Welcome to the interactive birthday game! Click the button to reveal your surprise message.</p>
+    <button id="surpriseBtn">Reveal Surprise</button>
+    <p id="message" style="padding-top: 12px;"></p>
+  </div>
+
+  <script>
+    const btn = document.getElementById('surpriseBtn');
+    const msg = document.getElementById('message');
+    const surprises = ['Happy Birthday Amruta!', 'Make a wish and blow the candles!', 'You are awesome!', 'Have a magical celebration!'];
+    btn.addEventListener('click', () => {
+      msg.textContent = surprises[Math.floor(Math.random() * surprises.length)];
+    });
+  </script>
+</body>
+</html>
